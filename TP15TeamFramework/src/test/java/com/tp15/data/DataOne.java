@@ -4,5 +4,6 @@ public class DataOne {
 	public static void main(String[] args) {
 		System.out.println("Hi");
 		System.out.println("Testit");
+		System.out.println("com.tp15.data");
 	}
 }
