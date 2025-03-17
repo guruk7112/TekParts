@@ -2,19 +2,31 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
     <classes>
       <class name="Ecommerce.OnlineShopping.module.AdminModulesTest">
         <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
           <include name="insertProductTest"/>
-          <include name="createSubCategory"/>
-          <include name="createCategoryTest"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
         </methods>
       </class> <!-- Ecommerce.OnlineShopping.module.AdminModulesTest -->
+      <class name="Ecommerce.OnlineShopping.module.ShoppingTest">
+        <methods>
+          <include name="configAM"/>
+          <include name="fillReviewTest"/>
+          <include name="configBM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="removeFromWishListTest"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="trackOrderTest"/>
+        </methods>
+      </class> <!-- Ecommerce.OnlineShopping.module.ShoppingTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -78,16 +78,16 @@ public class BaseClass {
 	public void configAM() throws Throwable {
 		System.out.println("===Logout to Application");
 		insertProductPage insert=new insertProductPage(driver);
-		//insert.AdminLogout();
-		//String back=fLib.getDataFromPropertiesFile("home");
-	//	driver.navigate().to(back);
+		insert.AdminLogout();
+		String back=fLib.getDataFromPropertiesFile("home");
+		driver.navigate().to(back);
     
 	}
 
 	@AfterClass(groups= { " smoke","integration","end to end"})
 	public void configAC() {
 		System.out.println("===Close the BROWSER===");
-   // driver.close();
+    driver.close();
 	}
 
 	@AfterSuite(groups= { " smoke","integration","end to end"})
