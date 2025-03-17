@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.comcast.crm.generic.databaseutility.DataBaseUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
@@ -38,19 +39,18 @@ public class BaseClass {
 		System.out.println("===Connect to DB , Report Config===");
 		dbLib.getDbconnection();
 	}
-
+//@Parameters("BROWSER")
 	@BeforeClass(groups= { " smoke","integration","end to end"})
 
 	public void configBC() throws Throwable {
 		System.out.println("===Launch the BROWSER===");
 
-		String BROWSER = fLib.getDataFromPropertiesFile("browser");
-
-		if (BROWSER.equals("Chrome")) {
+		String BROWSE =fLib.getDataFromPropertiesFile("browser");
+		if (BROWSE.equals("Chrome")) {
 			driver = new ChromeDriver();
-		} else if (BROWSER.equals("FireFox")) {
+		} else if (BROWSE.equals("FireFox")) {
 			driver = new FirefoxDriver();
-		} else if (BROWSER.equals("Edge")) {
+		} else if (BROWSE.equals("edge")) {
 			driver = new EdgeDriver();
 		} else {
 			driver = new ChromeDriver();

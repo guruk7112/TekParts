@@ -5,11 +5,18 @@
     <classes>
       <class name="Ecommerce.OnlineShopping.module.ShoppingTest">
         <methods>
-          <include name="configAM"/>
-          <include name="configBM"/>
+          <include name="AddToCartTest"/>
           <include name="configBS"/>
-          <include name="configBC"/>
+          <include name="removeFromWishListTest"/>
           <include name="configAS"/>
+          <include name="forgotPasswordInvlidTest"/>
+          <include name="configAM"/>
+          <include name="QuantityVerificationTest"/>
+          <include name="fillReviewTest"/>
+          <include name="configBM"/>
+          <include name="configBC"/>
+          <include name="MyAcountTest"/>
+          <include name="WishListTest"/>
           <include name="configAC"/>
           <include name="trackOrderTest"/>
         </methods>

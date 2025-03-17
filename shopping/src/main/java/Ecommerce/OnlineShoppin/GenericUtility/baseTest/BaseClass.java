@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.comcast.crm.generic.databaseutility.DataBaseUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
@@ -40,29 +41,22 @@ public class BaseClass {
 		System.out.println("===Connect to DB , Report Config===");
 		dbLib.getDbconnection();
 	}
-
+//@Parameters("BROWSER")
 	@BeforeClass(groups= { " smoke","integration","end to end"})
 
 	public void configBC() throws Throwable {
 		System.out.println("===Launch the BROWSER===");
 
-		String BROWSER = fLib.getDataFromPropertiesFile("browser");
+		String BROWSE = fLib.getDataFromPropertiesFile("browser");
 
-		if (BROWSER.equals("Chrome")) {
+		if (BROWSE.equals("Chrome")) {
 			driver = new ChromeDriver();
-		} else if (BROWSER.equals("FireFox")) {
+		} else if (BROWSE.equals("FireFox")) {
 			driver = new FirefoxDriver();
-		} else if (BROWSER.equals("Edge")) {
+		} else if (BROWSE.equals("edge")) {
 			driver = new EdgeDriver();
 		} else {
-			driver = new ChromeDriver(); // After launching the browser, inside driver we have browser session ID and we
-											// want this driver object in my listner implementation class and we cannot
-											// create object of baseclass because they are (annotation methods got
-											// executed automatically we cannot invoke them because they are
-											// instructions so made them static and then by taking help of
-											// classname(BaseClass) we can access the driver object but one problem is
-											// it will not execute in parallel execution (static method will have only
-											// one instance) so create one more variable called "sdriver"
+			driver = new ChromeDriver(); 
 		}
 		wLib.waitForPageToLoad(driver);
 

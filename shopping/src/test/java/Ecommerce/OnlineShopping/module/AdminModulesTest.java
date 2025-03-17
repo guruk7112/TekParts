@@ -1,7 +1,6 @@
 package Ecommerce.OnlineShopping.module;
 
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.AdminCategoryTitle;
@@ -10,9 +9,10 @@ import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.HomePageTitle;
 import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.SubCategoryPage;
 import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.insertProductPage;
 import junit.framework.Assert;
+
 public class AdminModulesTest extends BaseClass {
 
-	@Test(groups="smoke")
+	@Test(retryAnalyzer=com.comcast.crm.generic.listenerutility.RetryListenerImp.class)
 	public void createCategoryTest() throws Throwable {
 		AdminCategoryTitle create = new AdminCategoryTitle(driver);
 		HomePageTitle ho = new HomePageTitle(driver);

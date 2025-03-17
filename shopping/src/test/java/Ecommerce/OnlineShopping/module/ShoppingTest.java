@@ -24,7 +24,7 @@ import Ecommerce.OnlineShopping.ObjectRepositery.SignInTitle;
 
 public class ShoppingTest extends BaseClass {
 
-	@Test(groups = "smoke")
+	@Test
 	/* Creating new Account */
 	public void MyAcountTest() throws Throwable {
 
@@ -42,7 +42,7 @@ public class ShoppingTest extends BaseClass {
 
 	}
 
-	@Test(groups = "end to end")
+	@Test
 	/* adding product to cart */
 	public void AddToCartTest() throws Throwable {
 		MyCartTitle cart = new MyCartTitle(driver);
@@ -58,7 +58,7 @@ public class ShoppingTest extends BaseClass {
 
 	}
 
-	@Test(groups = "end to end")
+	@Test
 	/* adding product to wishlist and verifying */
 	public void WishListTest() throws Throwable {
 		ProductCategoryTitle category = new ProductCategoryTitle(driver);
@@ -73,7 +73,7 @@ public class ShoppingTest extends BaseClass {
 		Assert.assertEquals(wishproduct, product);
 	}
 
-	@Test(groups = "end to end")
+	@Test
 	public void fillReviewTest() throws Throwable {
 		MyCartTitle cart = new MyCartTitle(driver);
 		ProductCategoryTitle category = new ProductCategoryTitle(driver);
@@ -98,7 +98,7 @@ public class ShoppingTest extends BaseClass {
 		details.getreviewSubmitButton().click();
 	}
 
-	@Test(groups = "integration")
+	@Test
 	public void removeFromWishListTest() {
 		MyCartTitle cart = new MyCartTitle(driver);
 		ProductCategoryTitle category = new ProductCategoryTitle(driver);
@@ -113,7 +113,7 @@ public class ShoppingTest extends BaseClass {
 
 	}
 
-	@Test(groups = "integration")
+	@Test
 	public void QuantityVerificationTest() throws Exception {
 		MyCartTitle cart = new MyCartTitle(driver);
 		ProductCategoryTitle category = new ProductCategoryTitle(driver);
@@ -129,7 +129,7 @@ public class ShoppingTest extends BaseClass {
 		wLib.alertHandling(driver);
 	}
 
-	@Test(groups = "end to end")
+	@Test
 	public void forgotPasswordInvlidTest() throws Throwable {
 		SignInTitle sign = new SignInTitle(driver);
 		String pemial = fLib.getDataFromPropertiesFile("fgEmail");
@@ -148,7 +148,7 @@ public class ShoppingTest extends BaseClass {
 		Assert.assertTrue(warning.isDisplayed());
 	}
 
-	@Test(groups="end to end")
+	@Test
 	public void trackOrderTest() throws Throwable {
 		MyCartTitle category = new MyCartTitle(driver);
 		ProductCategoryTitle cat = new ProductCategoryTitle(driver);
