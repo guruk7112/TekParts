@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class RetryListenerImp implements IRetryAnalyzer{
 
 	int count=0;
-	int limitCount=5;                    // retry execution 5 times
+	int limitCount=5;                   
 	@Override
 	public boolean retry(ITestResult result) {
         if(count<limitCount) {

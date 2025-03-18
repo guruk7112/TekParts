@@ -27,7 +27,7 @@ public class ListImpClass implements ITestListener, ISuiteListener {
 	public void onStart(ISuite suite) {
 		System.out.println("Report Configaration"); // coming from ISuiteListener
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
-		ExtentSparkReporter spark = new ExtentSparkReporter("./AdvanceReport/report" + time + ".html");
+		ExtentSparkReporter spark = new ExtentSparkReporter("C:\\Users\\Gurup\\git\\repository3\\shopping\\AdvanceReport" + time + ".html");
 		spark.config().setDocumentTitle("CRM Test Suite results");  //title 
 		spark.config().setReportName("CRM Report");
 		spark.config().setTheme(Theme.valueOf(time));
