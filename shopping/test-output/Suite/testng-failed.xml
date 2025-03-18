@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="tests" name="TestRunner-edge(failed)">
-    <parameter name="BROWSER" value="edge"/>
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="Ecommerce.OnlineShopping.module.AdminModulesTest">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="insertProductTest"/>
+          <include name="createSubCategory"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- Ecommerce.OnlineShopping.module.AdminModulesTest -->
       <class name="Ecommerce.OnlineShopping.module.ShoppingTest">
         <methods>
           <include name="configAM"/>
@@ -17,51 +28,6 @@
           <include name="trackOrderTest"/>
         </methods>
       </class> <!-- Ecommerce.OnlineShopping.module.ShoppingTest -->
-      <class name="Ecommerce.OnlineShopping.module.AdminModulesTest">
-        <methods>
-          <include name="configBM"/>
-          <include name="configAM"/>
-          <include name="configBS"/>
-          <include name="configBC"/>
-          <include name="insertProductTest"/>
-          <include name="createSubCategory"/>
-          <include name="configAS"/>
-          <include name="configAC"/>
-        </methods>
-      </class> <!-- Ecommerce.OnlineShopping.module.AdminModulesTest -->
     </classes>
-  </test> <!-- TestRunner-edge(failed) -->
-  <test thread-count="3" parallel="tests" name="TestRunner-firefox(failed)">
-    <parameter name="BROWSER" value="FireFox"/>
-    <classes>
-      <class name="Ecommerce.OnlineShopping.module.ShoppingTest">
-        <methods>
-          <include name="forgotPasswordInvlidTest"/>
-          <include name="configAM"/>
-          <include name="fillReviewTest"/>
-          <include name="configBM"/>
-          <include name="configBS"/>
-          <include name="configBC"/>
-          <include name="WishListTest"/>
-          <include name="removeFromWishListTest"/>
-          <include name="configAS"/>
-          <include name="configAC"/>
-          <include name="trackOrderTest"/>
-        </methods>
-      </class> <!-- Ecommerce.OnlineShopping.module.ShoppingTest -->
-      <class name="Ecommerce.OnlineShopping.module.AdminModulesTest">
-        <methods>
-          <include name="configBM"/>
-          <include name="configAM"/>
-          <include name="configBS"/>
-          <include name="configBC"/>
-          <include name="insertProductTest"/>
-          <include name="createSubCategory"/>
-          <include name="createCategoryTest"/>
-          <include name="configAS"/>
-          <include name="configAC"/>
-        </methods>
-      </class> <!-- Ecommerce.OnlineShopping.module.AdminModulesTest -->
-    </classes>
-  </test> <!-- TestRunner-firefox(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

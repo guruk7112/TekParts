@@ -170,9 +170,10 @@ public class ShoppingTest extends BaseClass {
 		pay.getPaySubmit().click();
 
 		track.getTrack().click();
-	   
+
 		String dis = eLib.getDataFromExcel("MyAcount", 6, 0);
 		Assert.assertFalse(dis.isBlank());
+		driver.switchTo().defaultContent();
 
 
 	}
