@@ -50,6 +50,7 @@ public WebElement getreviewName() {
 private WebElement reviewInfo;
 
 public WebElement getreviewIngo() {
+	wLib.scrollByAmt(driver, 0, 300);
 	return reviewInfo;
 }
 @FindBy(name="submit")

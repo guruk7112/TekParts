@@ -16,6 +16,7 @@ import org.testng.annotations.Parameters;
 
 import com.comcast.crm.generic.databaseutility.DataBaseUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
+import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 
 import Ecommerce.OnlineShopping.GenericFileUtility.FileUtility.ExcelUtility;
@@ -59,7 +60,7 @@ public class BaseClass {
 			driver = new ChromeDriver(); 
 		}
 		wLib.waitForPageToLoad(driver);
-
+         UtilityClassObject.setDriver(driver);                  //initializing the path to listener utility(TakesScriin shot) 
 		String URL = fLib.getDataFromPropertiesFile("url");
 		driver.get(URL);
 	}

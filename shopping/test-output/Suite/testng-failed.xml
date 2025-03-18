@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.comcast.crm.generic.listenerutility.ListImpClass"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="Ecommerce.OnlineShopping.module.AdminModulesTest">
@@ -18,7 +21,6 @@
       <class name="Ecommerce.OnlineShopping.module.ShoppingTest">
         <methods>
           <include name="configAM"/>
-          <include name="fillReviewTest"/>
           <include name="configBM"/>
           <include name="configBS"/>
           <include name="configBC"/>

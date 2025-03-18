@@ -5,7 +5,7 @@
 <listener class-name="com.comcast.crm.generic.listenerutility.ListImpClass"></listener>
 
 </listeners>
-  <test thread-count="5" name="Test">
+  <test name="Test">
     <classes>
       <class name="Ecommerce.OnlineShopping.module.ShoppingTest"/>
       <class name="Ecommerce.OnlineShopping.module.AdminModulesTest"/>

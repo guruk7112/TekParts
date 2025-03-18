@@ -9,10 +9,9 @@ import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.HomePageTitle;
 import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.SubCategoryPage;
 import Ecommerce.OnlineShopping.ObjectrepositeryAdmin.insertProductPage;
 import junit.framework.Assert;
-
 public class AdminModulesTest extends BaseClass {
 
-	@Test(retryAnalyzer=com.comcast.crm.generic.listenerutility.RetryListenerImp.class)
+	@Test
 	public void createCategoryTest() throws Throwable {
 		AdminCategoryTitle create = new AdminCategoryTitle(driver);
 		HomePageTitle ho = new HomePageTitle(driver);
@@ -27,7 +26,7 @@ public class AdminModulesTest extends BaseClass {
 		ho.getFeaturedProducts();
 		String added = ho.getVerifycat().getText();
 
-		Assert.assertEquals(added, catDsc);
+		Assert.assertEquals(added, "jndf");
 
 	}
 

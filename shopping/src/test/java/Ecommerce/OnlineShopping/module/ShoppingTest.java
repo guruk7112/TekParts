@@ -6,7 +6,7 @@ package Ecommerce.OnlineShopping.module;
  * 
  */
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
@@ -23,6 +23,8 @@ import Ecommerce.OnlineShopping.ObjectRepositery.PaymentMethodTitle;
 import Ecommerce.OnlineShopping.ObjectRepositery.ProductCategoryTitle;
 import Ecommerce.OnlineShopping.ObjectRepositery.ProductDetailsTitle;
 import Ecommerce.OnlineShopping.ObjectRepositery.SignInTitle;
+
+
 public class ShoppingTest extends BaseClass {
 
 	@Test
